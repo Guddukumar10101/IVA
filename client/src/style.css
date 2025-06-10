@@ -1,0 +1,65 @@
+/* * {
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html{
+    font-size: 10px;
+}
+.slick-dots li{
+    color: #e61e1e !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color:rgba(251, 251, 244, 0.402) !important;
+
+}
+.slick-dots li button:before
+{
+    font-size: 2rem !important;
+ 
+    
+}
+
+
+.slick-dots  {
+
+   position: absolute !important;
+   bottom: 0.5rem !important;
+    background: rgba(36, 36, 36, 0.885) !important;
+    height: fit-content !important;
+    width: fit-content !important;
+    border-radius: 2rem;
+    left: 50%;
+}
+/* --------Dashbord-------- */
+
+
+
+
+
+
+
+
+/* ----------------------HomePage------------ */
+.App {
+    overflow-x: hidden;
+    height: 100vh;
+    background:  #522222;
+}
+
+
+
+li {
+    list-style: none;
+
+    text-decoration: none;
+}
+
+li * {
+    text-decoration: none;
+    color: white;
+} */

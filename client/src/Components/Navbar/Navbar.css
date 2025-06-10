@@ -1,0 +1,174 @@
+:root {
+    --favbg:
+}
+
+.navbar {
+    background: #680e0e;
+    width: 100%;
+    height: fit-content;
+    color: beige;
+    display: grid;
+    position: relative;
+    grid-template-columns: .5fr 1.5fr 1.5fr;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+}
+
+.logo {
+    border: #f40505 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.logo img{
+    width: 100%;
+}
+
+
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: xx-large;
+    color: white;
+    text-shadow: 2px 2px gray;
+}
+
+.navitems *:hover {
+    color: rgb(221, 199, 38);
+
+}
+
+.navitems {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 10%;
+    padding-right: 1.5rem;
+    z-index: 500;
+
+}
+
+.navitems * {
+    cursor: pointer;
+
+}
+
+.dropdown {
+
+    transform: scale(.91);
+    position: absolute;
+    top: 20%;
+
+
+}
+
+.dropdownitems {
+    background: #4a0707;
+    border-radius: .5rem;
+    position: absolute;
+    min-width: 200px;
+    bottom: -200px;
+    height: fit-content;
+    padding: 15px;
+    font-size: large;
+    line-height: 3;
+}
+
+.menudropdownitems {
+    position: absolute;
+    background: #09074a;
+    border-radius: .5rem;
+
+    min-width: 150px;
+    top: 10%;
+    right: 100%;
+    height: fit-content;
+    padding: 15px;
+    font-size: small;
+    line-height: 3;
+    z-index: 510;
+}
+
+
+
+.dropdownitems li *:hover {
+    border-left: #f40505 1px solid;
+    color: rgb(144, 226, 30);
+    font-weight: bolder;
+    padding: 2px;
+}
+
+.menubar {
+    position: absolute;
+    background: #4a0707;
+    border-radius: .5rem;
+
+    min-width: 200px;
+    top: 100%;
+    right: 2px;
+    height: fit-content;
+    padding: 15px;
+    font-size: large;
+    line-height: 3;
+    z-index: 500;
+}
+
+.menubar li *:hover {
+    border-left: #f40505 1px solid;
+    color: rgb(144, 226, 30);
+    font-weight: bolder;
+    padding: 2px;
+}
+
+.menubaricon {
+    display: none;
+
+}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .navitems {
+        display: none;
+
+    }
+
+    .menubaricon {
+        position: relative;
+        justify-content: center;
+
+        align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        gap: 10%;
+        font-size: larger;
+        padding-right: 1.5rem;
+        z-index: 500;
+        cursor: pointer;
+
+    }
+
+    .heading {
+        margin-left: 2rem;
+        width: 150%;
+        font-size: 2rem;
+        color: white;
+        text-shadow: 2px 2px gray;
+    }
+
+
+}

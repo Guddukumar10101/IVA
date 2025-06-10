@@ -1,0 +1,145 @@
+
+
+.Toastify__toast-container {
+  width: fit-content;
+}
+
+select:hover{
+  cursor: pointer;
+}
+
+
+.Admision-form {
+  max-width: 80%;
+  margin: 1.25rem auto;
+  padding: 1.25rem;
+  background-color: #f9f9f9;
+  padding-right: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.Admision-form :nth-child(1){
+    text-align: center;
+    font-weight: 200;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   transition: 5s;
+}
+
+.Admision-form label {
+  display: block;
+  margin-bottom: 0.625rem;
+}
+.class-div{
+  display: flex;
+  justify-content: space-between;
+  gap: 1%;
+
+
+  
+  
+}
+.total-fee{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.total-fee :nth-child(1){
+  font-size: large;
+  margin-right: .5rem;
+  font-weight: bolder;
+  color: rgb(165, 144, 144);
+
+}
+.total-fee :nth-child(2){
+  font-size: 1.5rem;
+  font-weight: 900;
+color: rgb(63, 105, 0);
+}
+#rupeesign{
+  font-size: 1rem;
+}
+
+
+
+
+textarea{
+ height: fit-content;
+ min-width: 90%   ;
+  padding: 1.25rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: rgb(199, 192, 192) 1px solid;
+}
+.Admision-form input{
+    font-size: large;
+}
+
+.Admision-form input[type='text'], .Admision-form input[type='date'], .Admision-form input[type='number'], .Admision-form input[type='email'] {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem;
+
+}
+
+.Admision-form button[type='submit'], .Admision-form button[type='reset'] {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+
+.Admision-form button[type='submit']:hover, .Admision-form button[type='reset']:hover {
+  background-color: #3e8e41;
+}
+
+@media only screen and (max-width: 48rem) {
+  .Admision-form {
+    margin: 0.625rem auto;
+    padding: 0.625rem;
+    overflow: hidden;
+
+    padding-right: 2rem;
+   
+  }
+  input{
+    width: 100% !important;
+  }
+ 
+  .Admision-form input{
+    font-size: small;
+}
+  .Admision-form input[type='text'], .Admision-form input[type='date'], .Admision-form input[type='number'], .Admision-form input[type='email'] {
+    height: 2rem;
+    margin-bottom: 0.625rem;
+  margin-right: 0.5 rem;
+  }
+  .Admision-form button[type='submit'], .Admision-form button[type='reset'] {
+    height: 2rem;
+    margin-bottom: 0.3125rem;
+  }
+}
+
+#gotoadmision{
+  color: blueviolet;
+  transition: none;
+  cursor: pointer;
+}
+
+#gotoadmision:hover{
+  color:blue;
+  transition: none;
+}
+.ad-log{
+  margin: 20px;
+}

@@ -1,0 +1,30 @@
+.faculty{
+    display: flexbox;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card{
+    display: flexbox;
+    width: fit-content;
+
+}
+.card-image{
+    border-radius: 50%;
+    background: #000;
+    object-fit: cover;
+    overflow: hidden;
+    width: fit-content;
+}
+.card-image img{
+   width: 300px;
+   height: 300px;
+   object-fit: cover;
+
+}
+
+.card-content h2{
+    font-size: clamp( 1.5rem, 2.5vw, 2rem);
+}

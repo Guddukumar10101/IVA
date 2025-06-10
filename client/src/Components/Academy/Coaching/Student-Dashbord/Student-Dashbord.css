@@ -1,0 +1,351 @@
+:root{
+    --baground1:#939597;
+    --baground2:#926779;
+    --baground3:#c97a9b;
+            text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+*{
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+html{
+    margin: 0px;
+    padding: 0px;
+            text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+.user *{
+    font-size: 5px !important;
+}
+
+.navbar{
+    background-color: var(--baground3);
+    color: #fff;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    padding: 1rem;
+padding-right:5.2rem ;
+    justify-content:space-around;
+    width: 100%;
+
+}
+
+.logo{
+    width: 10%;
+}
+
+img{
+    width: 80%;
+}
+.heading{
+   justify-content: center;
+   display: flex;
+   text-align: center;
+   align-items: center;
+   font-size: 1em;
+}
+
+
+
+
+
+.navlinks{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    padding-left: 2rem;
+   
+}
+
+.navlinks ul{
+    display: flex;
+    font-size: large;
+    gap: 2rem;
+    list-style: none;
+    text-decoration: none;
+    align-content: center;
+
+    width: 100%;
+
+}
+
+/* #admision-login *{
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+} */
+.navlinks ul li *{
+    text-decoration: none;
+    color: #fff;
+    font-size: larger;
+}
+.navlinks ul li *:hover{
+    color:#FFC107 ;
+}
+
+
+.admisionlogin *:hover{
+    color: #FFC107;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    html{
+        font-size: 1rem;
+    }
+    .admision-login{
+        display: none;
+    }
+    .navbar{
+        display: flex;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .logo{
+        width: 25%;
+        margin-left: .51rem;
+        padding: 0.2rem;
+        padding-right: 0px;
+    }
+
+    .heading{
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-left:0px;
+        font-size: clamp(.5rem , 4vw, 6rem);
+        font-weight: bolder;
+
+     }
+     
+     .menuicon{
+        width: 10%;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+     }
+     .menuicon *{
+        font-size: 2rem;
+     
+     }
+    .navlinks{
+        display: none;
+
+    }
+
+    .menubar{
+        margin-top: 1px;
+        padding: 1rem;
+        width: 100%;
+        border-radius:5px 0px 0px  5px  ;
+        
+    position: relative;
+    
+        right: 0px;
+        background-color: var(--baground2) ;
+        color: black;
+        display: flexbox;
+        
+    
+        list-style: none;
+    }
+
+    .closeicon{
+        position: absolute;
+        top: 3px;
+       right: 5px;
+       
+    }
+
+    .closeicon *{
+        font-size: 2rem;
+        color: white;
+    }
+    ul{
+        list-style: none;
+        display: flexbox;
+        
+
+       
+    }
+    .menubar ul li{
+        margin: 1rem;
+
+    }
+    .menubar ul li *:hover{
+        color:yellow;
+        
+    }
+    .menubar ul li *{
+        font-size:1.55rem;
+        list-style: none;
+        color: white;
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+        text-decoration: none;
+    }
+
+    .menu-admision-login{
+       
+        display: flex;
+        justify-content:flex-start;
+        align-items: center;
+        margin: 2rem;
+        gap: 2rem;
+        
+    }
+    .menu-admision-login div{
+        width: fit-content;
+        margin-top: 10rem;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .menu-admision-login *{
+        font-size: 1.5rem;
+        
+        list-style: none;
+        text-decoration: none;
+        color: black;
+    }
+    .menu-admision-login *:hover{
+        color:yellow;
+    }
+    .usericon{
+        border: black solid 2px ;
+        width: fit-content;
+        border-radius: 50%;
+
+        
+    }
+ 
+   .usericon{
+       
+        font-size: 2rem ;
+        color:black
+       
+    }
+
+
+    
+
+}
+
+
+
+
+
+
+
+@media  screen and (min-width: 769px)  {
+    /* For tablets: */
+    * {
+        font-size: 14px;
+    }
+.usericon{
+position:absolute;
+top: -20px;
+}
+    
+
+    .logo{
+        width: 10%;
+        padding: 0px;
+    }
+    .heading{
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        margin-left:0px;
+        
+        font-size: clamp(1rem , 2vw, 6rem);
+        font-weight: bolder;
+
+     }
+.navlinks{
+    font-size:clamp(1rem , 2vw, 6rem); ;
+    width: fit-content;
+}
+
+     .navlinks *{
+       font-size: clamp(1rem , 1vw, 6rem);
+
+    }
+
+    .admision-login{
+   position: relative;
+    
+        align-items: center;
+        width: 60px;
+        display: flexbox;
+        margin-left: 3rem;
+        padding-left: .1rem;
+    
+    }
+
+    .admisionlogin{
+        font-size: 5px;
+
+        display: flex;
+        width: fit-content;
+        text-align: center;
+        justify-content: space-between;
+        gap:.1rem;
+        position: relative;
+        top: 70%;
+
+    }
+    .admisionlogin *{
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        
+        font-weight: 500;
+    }
+
+
+    .admision-login .usericon{
+        border: 2px rgba(59, 29, 29, 0.979) solid;
+     padding: 2px;
+       color: rgba(8, 7, 7, 0.377);
+        border-radius: 50%;
+   
+   position: absolute;
+     font-size: xx-large;
+     margin-bottom: 2px;
+        
+ 
+    }
+    .menuicon{
+        display: none;
+    }
+    .menubar{
+        display: none;
+    }
+    .navbar {
+        flex-direction: row;
+    
+    }
+}
+
+
