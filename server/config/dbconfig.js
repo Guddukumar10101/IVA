@@ -1,6 +1,7 @@
 
 import dotenv from 'dotenv'
 import { Sequelize,DataTypes, } from 'sequelize'
+import mysql from'mysql2'
 dotenv.config()
 
 const sequelize= new Sequelize(
@@ -22,4 +23,20 @@ async function  ivcoachingdbconnection (){
   } 
 }
 
-export  {ivcoachingdbconnection,sequelize}
+
+let Connection;
+
+async function dbconncection (){
+    if(!Connection){
+      Connection=await mysql.createConnection({
+        host:process.env.HOST,
+        user:process.env.USER,
+        password:process.env.PASSWORD,
+        database:process.env.INSPIRED_VISION_DATABASE
+      })
+    }
+return Connection
+}
+
+
+export  {ivcoachingdbconnection,sequelize, dbconncection}
