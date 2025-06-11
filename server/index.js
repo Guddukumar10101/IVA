@@ -29,6 +29,6 @@ app.listen(process.env.PORT,()=>{
   ivcoachingdbconnection();
   StudentAdmisionModel.sync({})
   StudentFeeModel.sync({})
-  AdminModel.sync({force:true})
+  AdminModel.sync({})
 })
 

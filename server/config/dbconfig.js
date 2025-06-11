@@ -1,7 +1,7 @@
 
 import dotenv from 'dotenv'
 import { Sequelize,DataTypes, } from 'sequelize'
-import mysql from'mysql2'
+import mysql from'mysql2/promise'
 dotenv.config()
 
 const sequelize= new Sequelize(

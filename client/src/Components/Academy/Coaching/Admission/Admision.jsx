@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import axios from 'axios'
 import './Admision.css'
 import { FaRupeeSign } from "react-icons/fa";
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 export default function Admision() {
 const [classs,setclasss]=useState('')
 const[course,setcourse]=useState('')
@@ -45,10 +45,8 @@ const Handlesubmit=(event)=>{
   .then(res=>{
     toast.success("Congrastulation , Your Admision is Completed !");
     setloading(false)
-    Navigate('/login') 
-  })
-
-  .catch(err=>{
+    useNavigate('/login') 
+  }).catch(err=>{
     toast.error(err.
       response.data)
   setloading(false)}

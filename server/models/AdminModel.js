@@ -9,9 +9,10 @@ const AdminModel=sequelize.define('AdminData',{
         type:DataTypes.STRING,
     },
     AdminEmail:{
-        type:DataTypes.STRING,
-        primaryKey:true
-    },
+    type:DataTypes.STRING,
+    unique:true},
+        
+        
     Password:{
         type:DataTypes.STRING
     }

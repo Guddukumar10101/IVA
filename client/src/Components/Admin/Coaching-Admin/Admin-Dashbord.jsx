@@ -18,7 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import { Link, Navigate, Outlet } from 'react-router-dom';
+import { Link, Navigate, Outlet, useNavigate } from 'react-router-dom';
 import { Alert } from 'bootstrap';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import { BiSolidGroup } from "react-icons/bi";
@@ -30,6 +30,8 @@ import GroupsIcon from '@mui/icons-material/Groups';
 
 
 import './Admin.css'
+import axios from 'axios';
+import { useEffect } from 'react';
 
 const drawerWidth = 240;
 
@@ -114,7 +116,34 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function AdmisionDashbord() {
 
 
-  const listitemname={'home':[<HomeOutlinedIcon/>,''],'Students':[<PeopleAltIcon/>,'AllStudents'],'Feedetails':[<MonetizationOnIcon/>,'StudentFee'],'AdmisionRequest':[<NotificationsActiveIcon/>,'AdmisionRequest']}
+
+    const fetchUser = async () => {
+      try {
+      const token = localStorage.getItem('token')
+      const response = axios.get('http://localhost:8081/auth/home ', {
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
+      })
+      if(response.status !==201  ){
+        alert("hii")
+        useNavigate('/Admin-Login')
+      }
+ }catch (error) {
+  useNavigate('/Login')
+  alert("hii err")
+  console.log(error)
+        
+      }
+    
+useEffect(()=>{
+ fetchUser()
+},[])
+     
+    }
+
+
+  const listitemname = { 'home': [<HomeOutlinedIcon />, ''], 'Students': [<PeopleAltIcon />, 'AllStudents'], 'Feedetails': [<MonetizationOnIcon />, 'StudentFee'], 'AdmisionRequest': [<NotificationsActiveIcon />, 'AdmisionRequest'] }
 
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -158,67 +187,67 @@ export default function AdmisionDashbord() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List className='MainList'  style={{textDecorationLine:'none'}}>
-        
-        
+        <List className='MainList' style={{ textDecorationLine: 'none' }}>
+
+
           {
-            Object.entries(listitemname).map(([key,value])=>
-           <ListItem  style={{textDecorationLine:'none'}}  disablePadding sx={{ display: 'block' }}>
-              <Link to={value[1]}> 
-              <ListItemButton className='listButton'
-               style={{textDecorationLine:'none'}}
-                sx={[
-                  {
-                    minHeight: 48,
-                    px: 2.5,
-                  },
-                  open
-                    ? {
-                        justifyContent: 'initial',
-                      }
-                    : {
-                        justifyContent: 'center',
+            Object.entries(listitemname).map(([key, value]) =>
+              <ListItem style={{ textDecorationLine: 'none' }} disablePadding sx={{ display: 'block' }}>
+                <Link to={value[1]}>
+                  <ListItemButton className='listButton'
+                    style={{ textDecorationLine: 'none' }}
+                    sx={[
+                      {
+                        minHeight: 48,
+                        px: 2.5,
                       },
-                ]}
-              >
-                <ListItemIcon  className='listIcon'
-                  sx={[
-                    {
-                      minWidth: 0,
-                      justifyContent: 'center',
-                    },
-                    open
-                      ? {
-                          mr: 3,
+                      open
+                        ? {
+                          justifyContent: 'initial',
                         }
-                      : {
-                          mr: 'auto',
+                        : {
+                          justifyContent: 'center',
                         },
-                  ]}
-                >
-               {value[0]}
-                  </ListItemIcon>
-              <ListItemText className='listText'
-              color='success'
-                  primary={key}
-                  sx={
-              
-                    
-                    [
-                    open
-                      ? {
-                          opacity: 1,
-                        }
-                      : {
-                          opacity: 0,
+                    ]}
+                  >
+                    <ListItemIcon className='listIcon'
+                      sx={[
+                        {
+                          minWidth: 0,
+                          justifyContent: 'center',
                         },
-                  ]}
-                />
-              </ListItemButton></Link>
-            </ListItem> 
-            
-          )
-        }
+                        open
+                          ? {
+                            mr: 3,
+                          }
+                          : {
+                            mr: 'auto',
+                          },
+                      ]}
+                    >
+                      {value[0]}
+                    </ListItemIcon>
+                    <ListItemText className='listText'
+                      color='success'
+                      primary={key}
+                      sx={
+
+
+                        [
+                          open
+                            ? {
+                              opacity: 1,
+                            }
+                            : {
+                              opacity: 0,
+                            },
+                        ]}
+                    />
+                  </ListItemButton></Link>
+              </ListItem>
+
+            )
+          }
 
 
 
@@ -228,15 +257,15 @@ export default function AdmisionDashbord() {
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         <Typography sx={{ marginBottom: 2 }}>
-         
-       
+
+
         </Typography>
         <Typography sx={{ marginBottom: 2 }}>
-      
+
         </Typography>
-        <Outlet/>
+        <Outlet />
       </Box>
-   
+
     </Box>
   );
 }

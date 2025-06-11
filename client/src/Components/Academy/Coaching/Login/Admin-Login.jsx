@@ -9,7 +9,7 @@ export default function Admin_Login() {
     //all class and id of the admision page due to same UI
     <div className='Admision' >
       
-<form className='Admision-form' action='#' >
+<form className='Admision-form'  >
   <h2>Admin Login Page</h2>
   
     <br />
