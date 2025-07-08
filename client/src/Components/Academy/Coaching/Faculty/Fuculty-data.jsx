@@ -25,7 +25,7 @@ export const Facultydata =
         ,
         role:'Faculty (Economics & Social Science )',
         photo: Shweta,
-         description:' i am an inteligent women '
+         description:'Economics Specialist '
     },
     {
         teacher: 'Himanshu Dwivedi'
