@@ -114,10 +114,10 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function AdmisionDashbord() {
+const navigate=useNavigate()
 
 
-
-    const fetchUser = async () => {
+const fetchAdmin = async () => {
       try {
       const token = localStorage.getItem('token')
       const response = axios.get('http://localhost:8081/auth/home ', {
@@ -125,19 +125,18 @@ export default function AdmisionDashbord() {
           "Authorization": `Bearer ${token}`
         }
       })
-      if(response.status !==201  ){
-        alert("hii")
-        useNavigate('/Admin-Login')
-      }
- }catch (error) {
-  useNavigate('/Login')
-  alert("hii err")
+      if(response.status !== 201 ){
+        navigate('/Student-Login')
+       
+ }}catch (error) {
+  navigate('/Login')
   console.log(error)
         
-      }
+     }
     
+
 useEffect(()=>{
- fetchUser()
+fetchAdmin()
 },[])
      
     }

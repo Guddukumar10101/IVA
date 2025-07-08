@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt'
 import dotenv from 'dotenv'
 import jwt from 'jsonwebtoken'
 
+
 const AdminRegister =async (req,res)=>{
    const {name,email,password}=req.body
    try {
@@ -50,18 +51,15 @@ const {email,password}=req.body;
 
 const VeryfyToken=async (req,res,next)=>{
    try {
-      const token=req.headers['authorization'].split('')[1]
-
+      const token=req.headers['authorization'].split('')[1]; 
       if(!token){
          return res.status(403).json({message:"No Token Provided "})
       }
       const decoded = jwt.verify(token,process.env.JWT_kEY)
-      req.id=decoded.id
+      req.Adminid=decoded.id
       next()
-
-   } catch (error) {
+   }catch (error) {
       return res.status(500).json({message:"Server error "})
-      
    }
 }
 
